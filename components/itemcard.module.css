@@ -1,0 +1,217 @@
+.delete {
+  margin: 10px;
+  position: absolute;
+  right: 0px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  opacity: 0.5;
+}
+.delete:before,
+.delete:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 25px;
+  width: 1px;
+  background-color: #2468b2;
+}
+.delete:before {
+  transform: rotate(45deg);
+}
+.delete:after {
+  transform: rotate(-45deg);
+}
+
+.item_card {
+  margin: 10px 0;
+  border-top: 1px solid #2468b2;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}
+
+.item_title {
+  margin-top: 48px;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.personalize {
+  color: #2468b2;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 450;
+}
+
+.item_name {
+  font-family: "BodoniRecut";
+  padding: 0;
+  margin: 5px;
+  font-size: 0.95rem;
+}
+
+.item_image {
+  text-align: center;
+  width: 100%;
+  height: 250px;
+}
+
+.item_image img {
+  z-index: -1;
+}
+
+.item_price_box {
+  font-family: "AvenirNext-Medium";
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  margin: -38px 0 50px 0;
+}
+
+.item_price {
+  font-size: 1.5rem;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.item_retailprice {
+  font-size: 0.8rem;
+}
+
+.item_save {
+  color: #2468b2;
+  font-weight: 600;
+}
+
+.item_description {
+  font-family: "AvenirNext-Medium";
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: #757575;
+  margin-top: 11vh;
+  margin-bottom: 5vh;
+  margin-left: 10px;
+  justify-content: flex-start;
+}
+
+.item_description_key ul {
+  padding: 0;
+}
+
+.item_description_key ul li {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.decription_label {
+  width: 35%;
+}
+
+@media (min-width: 768px) {
+  .delete {
+    margin: 30px 10px;
+    right: 30px;
+  }
+
+  .item_image {
+    max-width: 260px;
+    max-height: 250px;
+    position: absolute;
+    left: 30px;
+  }
+
+  .item_title {
+    margin: 50px 0 0 35vw;
+    text-align: start;
+  }
+
+  .item_name {
+    font-size: 1rem;
+  }
+
+  .item_price_box {
+    text-align: end;
+    margin: -42px 0 50px 0;
+  }
+
+  .item_price {
+    font-size: 1.2rem;
+  }
+
+  .item_retailprice {
+    display: none;
+  }
+
+  .item_description {
+    font-size: 0.8rem;
+    margin: 5vh 0 5vh 35vw;
+  }
+
+  .item_description_key ul li {
+    line-height: 1.5rem;
+  }
+
+  .decription_label {
+    width: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .item_title {
+    margin: 50px 0 0 26vw;
+  }
+
+  .personalize {
+    font-size: 1rem;
+    font-weight: 450;
+  }
+
+  .item_name {
+    font-size: 1.5rem;
+  }
+
+  .item_price {
+    font-size: 1.5rem;
+    margin: 10px 0 0 0;
+  }
+
+  .item_description {
+    font-size: 1rem;
+    margin: 5vh 0 5vh 26vw;
+  }
+
+  .item_description_key ul li {
+    line-height: 1.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .personalize {
+    font-size: 1.2rem;
+  }
+
+  .item_name {
+    font-size: 1.8rem;
+  }
+
+  .item_price {
+    font-size: 1.8rem;
+    margin: 5px 0 0 0;
+  }
+
+  .item_description {
+    font-size: 1.2rem;
+  }
+
+  .item_description_key ul li {
+    line-height: 2rem;
+  }
+}

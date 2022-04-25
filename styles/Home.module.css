@@ -1,10 +1,9 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 0.5rem;
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
+  padding: 0.5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -12,105 +11,168 @@
   align-items: center;
 }
 
-.footer {
+.cart {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
+  width: 100%;
+  flex-direction: column;
   align-items: center;
+  max-width: 768px;
+  height: auto;
 }
 
-.footer a {
+.item_checkout_section {
+  font-family: "AvenirNext-Medium";
+  color: #575757;
+}
+
+.pricedetail_border {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px 0;
+}
+
+.item_pricedetail p {
+  padding: 0;
+  margin: 0px 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  justify-content: space-between;
+  font-size: 0.8rem;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.totalprice {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 20px 10px 0 10px;
+  color: #2468b2;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.promocode {
+  margin: 0px 10px;
+  text-align: right;
+  font-size: 0.6rem;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.checkoutbutton_section {
   text-align: center;
+  margin: 15px 10px 0 10px;
+  width: 90vw;
+  font-family: "AvenirNext-Medium";
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.checkoutbutton_section button {
+  width: 100%;
+  height: 40px;
+  background-color: #21ac6b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.checkoutbutton_section img {
+  width: 12px;
+  height: 12px;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.checkoutbutton_section p {
+  font-size: 0.8rem;
+  color: #575757;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
+@media (min-width: 768px) {
+  .main {
+    margin: 1rem 2rem;
+  }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
+  .cart {
+    min-width: 100%;
+  }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
+  .pricedetail_border {
+    border-top: none;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
+  .item_pricedetail {
+    width: 45vw;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+  }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
+  .totalprice_section {
+    margin-top: -10px;
+    width: 45vw;
+  }
 
-@media (max-width: 600px) {
-  .grid {
+  .promocode {
+    display: none;
+  }
+
+  .checkout_desktop {
+    display: flex;
+    flex: 1;
+    border-top: 1px solid #2468b2;
     width: 100%;
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .item_checkout_section {
+    margin-right: 2.5vw;
+  }
+
+  .checkoutbutton_section {
+    margin: 40px 0 0 2.5vw;
+    width: 38vw;
+  }
+
+  .checkoutbutton_section button {
+    margin-bottom: 10px;
+  }
+
+  .checkoutbutton_section p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .item_pricedetail p {
+    font-size: 1rem;
+  }
+
+  .checkoutbutton_section {
+    width: 42.5vw;
+  }
+
+  .checkoutbutton_section button {
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .checkoutbutton_section img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkoutbutton_section p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .item_pricedetail p {
+    font-size: 1.3rem;
+  }
+
+  .checkoutbutton_section button {
+    height: 60px;
+    font-size: 1.3rem;
+  }
+
+  .checkoutbutton_section p {
+    font-size: 1.3rem;
   }
 }

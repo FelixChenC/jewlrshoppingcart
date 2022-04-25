@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  max-height: 3vh;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header img {
+  object-fit: contain;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-family: "BodoniRecut";
+  padding: 0;
+  margin: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    max-height: 5vh;
+    margin: 10px 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    margin: 0 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    margin: 20px 20px;
+  }
+
+  .title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    margin: 30px 20px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+}

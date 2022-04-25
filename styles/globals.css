@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("/fonts/Avenir Next.ttc");
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir.tcc");
+}
+
+@font-face {
+  font-family: "BodoniRecut";
+  src: url("/fonts/BodoniRecut-LightItalic.otf");
+}
+
+@font-face {
+  font-family: "fontawesome-webfont";
+  src: url("/fonts/fontawesome-webfont.ttf");
+}
+
+@font-face {
+  font-family: "AvenirNext-Medium";
+  src: url("/fonts/AvenirNext-Medium.otf");
+}
+
 html,
 body {
   padding: 0;
