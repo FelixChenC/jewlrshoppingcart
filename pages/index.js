@@ -41,6 +41,7 @@ export default function Home() {
   const [giftWarp, setGiftWarp] = useState(GIFT_WRAP_499);
   const [discount, setDiscount] = useState(DISCOUNT_20_OFF);
   const [checkoutTotal, setCheckoutTotal] = useState(0);
+  const [checkoutDisable, setCheckoutDisable] = useState(false);
 
   useEffect(() => {
     let total = 0;
@@ -54,6 +55,7 @@ export default function Home() {
     if (items.length == 0) {
       setDiscount(0);
       setGiftWarp(0);
+      setCheckoutDisable(true);
     } else {
       setDiscount(DISCOUNT_20_OFF);
       setGiftWarp(GIFT_WRAP_499);
@@ -119,7 +121,10 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.checkoutbutton_section}>
-              <button>
+              <button
+                disabled={checkoutDisable}
+                style={checkoutDisable ? { backgroundColor: "gray" } : {}}
+              >
                 <img src="/images/iconmonstr-lock-1-16.png" alt="lock" />
                 &nbsp;SECURE CHECKOUT
               </button>
